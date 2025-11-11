@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+/dist/
+/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env and logs
+.env
+*.log
+logs/
+
+# Database (exclude local SQLite db from repo)
+database/store.db
+
+# Electron packaging outputs
+release/
+
+# IDE/editor configs
+.vscode/
+.idea/
