@@ -1,0 +1,48 @@
+{
+  "name": "store-management-system",
+  "version": "1.0.0",
+  "description": "نظام إدارة المتاجر - CodeVia",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "electron": "electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "server": "node server.js"
+  },
+  "build": {
+    "appId": "com.codevia.store-system",
+    "productName": "نظام إدارة المتاجر",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*",
+      "!node_modules/.cache/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "express-session": "^1.17.3",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  }
+}
